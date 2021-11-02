@@ -25,8 +25,18 @@ const validatePassword = async (req, res, next) => {
   next();
 };
 
+const validateEmailExist = async (req, res, next) => {
+  const { email } = req.body;
+  const userEmail = await userModels.emailExist(email);
+  if (userEmail) {
+    return res.status(409).json({ message: 'Email already registered' });
+  }
+  next();
+};
+
 module.exports = {
   validateFields,
   validateEmail,
   validatePassword,
+  validateEmailExist,
 }

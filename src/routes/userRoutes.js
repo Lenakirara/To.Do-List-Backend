@@ -4,6 +4,7 @@ const {
   validateFields,
   validateEmail,
   validatePassword,
+  validateEmailExist,
 } = require('../middlewares/userValidation');
 
 const {
@@ -16,6 +17,7 @@ router.post('/',
   validateFields,
   validateEmail,
   validatePassword,
+  validateEmailExist,
   createUser);
 
 module.exports = router;
