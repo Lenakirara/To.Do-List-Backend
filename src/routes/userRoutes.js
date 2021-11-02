@@ -7,9 +7,11 @@ const {
 } = require('../middlewares/userValidation');
 
 const {
+  getUsers,
   createUser,
 } = require('../controllers/userControllers');
 
+router.get('/', getUsers);
 router.post('/',
   validateFields,
   validateEmail,

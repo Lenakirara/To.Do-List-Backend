@@ -2,6 +2,15 @@ const userServices = require('../services/userServices');
 
 const msgError = 'Sorry! Server request problem';
 
+const getUsers = async (_req, res) => {
+  try {
+    const users = await userServices.getUsers();
+    return res.status(200).json({ users });
+  } catch (error) {
+    return res.status(500).json({ message: msgError });
+  }
+};
+
 const createUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -13,5 +22,6 @@ const createUser = async (req, res) => {
 };
 
 module.exports = {
+  getUsers,
   createUser,
 };
