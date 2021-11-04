@@ -1,6 +1,10 @@
 const router = require('express').Router();
 
 const {
+  validateTask,
+} = require('../middlewares/taskValidations')
+
+const {
   validateJWTToken,
 } = require('../middlewares/jwtValidations');
 
@@ -12,7 +16,7 @@ const {
 
 router.get('/:id', findTaskById);
 router.get('/', getAllTasks);
-router.post('/', validateJWTToken, createTask);
+router.post('/', validateJWTToken, validateTask, createTask);
 
 
 module.exports = router;
