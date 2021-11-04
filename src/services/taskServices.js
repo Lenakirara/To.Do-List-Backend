@@ -17,8 +17,15 @@ const createTask = async (task, data) => {
   return createdTask;
 };
 
+const updateTask = async (id, task, data) => {
+  if (!ObjectId.isValid(id)) return null;
+  const editedTask = await taskModels.updateTask(id, task, data);
+  return editedTask;
+};
+
 module.exports = {
   createTask,
   findTaskById,
   getAllTasks,
+  updateTask
 };

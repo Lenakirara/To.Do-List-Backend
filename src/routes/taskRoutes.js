@@ -12,11 +12,13 @@ const {
   getAllTasks,
   findTaskById,
   createTask,
+  updateTask,
 } = require('../controllers/taskControllers');
 
 router.get('/:id', findTaskById);
 router.get('/', getAllTasks);
 router.post('/', validateJWTToken, validateTask, createTask);
+router.put('/:id', validateJWTToken, updateTask);
 
 
 module.exports = router;

@@ -38,8 +38,24 @@ const createTask = async (req, res) => {
   }
 };
 
+const updateTask = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { title, currentStatus } = req.body;
+    const { data } = req.user;
+    const task = await taskServices.updateTask(id, { title, currentStatus }, data.id);
+    if (!task) {
+      return res.status(400).json({ message: 'Invalid entries. Try again.' });
+    }
+    return res.status(200).json(task);
+  } catch (error) {
+    return res.status(500).json({ message: msgError });
+  }
+};
+
 module.exports = {
   findTaskById,
   getAllTasks,
   createTask,
+  updateTask,
 };
