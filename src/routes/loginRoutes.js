@@ -1,13 +1,17 @@
 const router = require('express').Router();
 
 const {
-  validateJWTToken,
-} = require('../middlewares/jwtValidations');
+  validateEmailLogin,
+  validatePasswordLogin,
+} = require('../middlewares/loginValidation');
 
 const {
   userLogin,
 } = require('../controllers/loginControllers');
 
-router.post('/', validateJWTToken, userLogin);
+router.post('/',
+  validateEmailLogin,
+  validatePasswordLogin,
+  userLogin);
 
 module.exports = router;

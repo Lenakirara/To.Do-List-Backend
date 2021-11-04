@@ -10,6 +10,13 @@ const createUser = async (name, email, password) => {
   return createdUser
 };
 
+/* const loginUser = async (email, password) => {
+  if (!email || !password) {
+    return res.status(401).json({ message: 'Incorrect username or password'});
+  }
+  const token = 
+} */
+
 module.exports = {
   getUsers,
   createUser,
