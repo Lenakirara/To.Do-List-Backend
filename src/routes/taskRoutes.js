@@ -6,9 +6,11 @@ const {
 
 const {
   getAllTasks,
+  findTaskById,
   createTask,
 } = require('../controllers/taskControllers');
 
+router.get('/:id', findTaskById);
 router.get('/', getAllTasks);
 router.post('/', validateJWTToken, createTask);
 
