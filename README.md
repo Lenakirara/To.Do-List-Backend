@@ -5,7 +5,6 @@
 
 Organizar uma lista de tarefas, utilizando o mongoDB local para o banco de dados.
 
-###
 ## Funcionalidades
 
 1. O programa deverá ser capaz de:
@@ -21,6 +20,24 @@ Organizar uma lista de tarefas, utilizando o mongoDB local para o banco de dados
 - em andamento
 - finalizada
 
-###
+## Habilidades desenvolvidas
 
-(Projeto em andamento - em breve README explicativo)
+- Node.JS
+- Express
+- Autenticação JWT
+- Arquitetura MSC
+- Banco de dados MongoDB
+
+## Para rodar o projeto
+
+1. Clone o repositório com o comando `git clone`. Use a URL `git@github.com:Lenakirara/To.Do-List-Backend.git`
+2. Entre na pasta do projeto e instale 'npm install`
+3. Para rodar a aplicação use o comando `npm run dev`
+
+## Testes
+
+1. Para rodar os testes use o comando `npm test`
+
+
+
+(Projeto em andamento)
