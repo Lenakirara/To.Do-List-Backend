@@ -31,7 +31,7 @@ Organizar uma lista de tarefas, utilizando o mongoDB local para o banco de dados
 ## Para rodar o projeto
 
 1. Clone o repositório com o comando `git clone`. Use a URL `git@github.com:Lenakirara/To.Do-List-Backend.git`
-2. Entre na pasta do projeto e instale 'npm install`
+2. Entre na pasta do projeto e instale `npm install`
 3. Para rodar a aplicação use o comando `npm run dev`
 
 ## Testes
