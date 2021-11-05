@@ -40,4 +40,4 @@ Organizar uma lista de tarefas, utilizando o mongoDB local para o banco de dados
 
 
 
-(Projeto em andamento)
+(Projeto e README em construção)
